@@ -2,13 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { CourseListComponent } from './courses/course-list.component';
+import { ReplacePipe } from './pipe/replace.pipe';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CourseListComponent,
+    ReplacePipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

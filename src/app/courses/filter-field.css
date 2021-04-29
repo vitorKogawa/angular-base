@@ -1,0 +1,16 @@
+.search-course{
+  margin: 10px;
+}
+
+.search-course-label-wrapper label{
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.search-course-input-wrapper input{
+  border: none;
+  border-bottom: 1px solid #808080;
+  outline: none;
+  padding: 5px 0px;
+  font-size: 20px;
+}
