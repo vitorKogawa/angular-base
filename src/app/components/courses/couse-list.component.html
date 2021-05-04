@@ -1,0 +1,31 @@
+<div class="search-course">
+    <div class="search-course-label-wrapper">
+        <label>Filter By: </label>
+    </div>
+    <div class="search-course-input-wrapper">
+        <input [(ngModel)]="filter" type="text" name="filter" id="filter">
+    </div>
+</div>
+<table>
+    <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Code</th>
+        <th>Rating</th>
+        <th>Release Date</th>
+    </tr>
+    <tr *ngFor="let course of filteredCourses">
+        <td>
+            <img [src]="course.imageUrl" width="40" height="40" alt="course_icon">
+        </td>
+        <td>{{ course.name }}</td>
+        <td>{{ course.price }}</td>
+        <td>{{ course.code | uppercase | replace: '-': '/'}}</td>
+        <td>{{ course.rating }}</td>
+        <td>{{ course.releaseDate | date: 'dd/MM/YYYY' }}</td>
+        <td>
+            <a [routerLink]="['/courses/info', course.id]">Edit</a>
+        </td>
+    </tr>
+</table>

@@ -3,7 +3,6 @@ import { Course } from './Course';
 import { CourseService } from './CouseService';
 
 @Component({
-  selector: 'app-course-list',
   templateUrl: './couse-list.component.html',
   styleUrls: ['./course-list.component.css', './filter-field.css'],
 })
